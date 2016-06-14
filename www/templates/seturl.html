@@ -1,0 +1,25 @@
+<ion-view cache-view="false" class="padding-left padding-right"  ng-controller="SetUrlCtrl" hide-nav-bar="true">
+  <form class="" role="form" w5c-submit="setting(data)" w5c-form-validate="" novalidate name="validateForm">
+    <ion-list class="list-inset">
+      <ion-item class="item-borderless"></ion-item>
+      <ion-item class="item-borderless"></ion-item>
+      <ion-item class="item-borderless"></ion-item>
+      <ion-item class="item-borderless text-center">
+        <img ng-src="./img/creec1.png" style="height:80px;width:100px"/>
+      </ion-item>
+      <ion-item class="item-borderless text-center calm">
+        <strong>&nbsp;&nbsp;请设置服务器地址！</strong>
+      </ion-item>
+      <label class="item item-input">
+        <i class="icon ion-cloud"></i>
+        <input type="url"
+               name="url"
+               ng-model="data.url"
+               placeholder="请输入服务器地址"
+               required=""
+               autocomplete="off">
+      </label>
+      <button type="submit" class="button button-full icon-right ion-chevron-right button-calm">立&nbsp;&nbsp;&nbsp;&nbsp;即&nbsp;&nbsp;&nbsp;&nbsp;设&nbsp;&nbsp;&nbsp;&nbsp;置</button>
+    </ion-list>
+  </form>
+</ion-view>

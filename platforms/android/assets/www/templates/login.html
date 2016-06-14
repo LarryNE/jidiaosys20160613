@@ -1,0 +1,28 @@
+<ion-view class="padding-left padding-right" cache-view="false" ng-controller="LoginCtrl" hide-nav-bar="true">
+  <form class="" role="form" w5c-submit="login(data)" w5c-form-validate="" novalidate name="validateForm">
+    <ion-list class="list-inset">
+      <ion-item class="item-borderless"></ion-item>
+      <ion-item class="item-borderless"></ion-item>
+      <ion-item class="item-borderless"></ion-item>
+      <ion-item class="item-borderless text-center">
+        <img ng-src="img/creec1.png" style="height:80px;width:100px"/>
+      </ion-item>
+      <ion-item class="item-borderless text-center calm">
+        <strong>&nbsp;&nbsp;生产管理信息系统</strong>
+      </ion-item>
+      <label class="item item-input">
+        <i class="icon ion-android-person"></i>
+        <input type="text"
+               name="name"
+               ng-model="data.account"
+               placeholder="请输入域账号">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-android-lock"></i>
+        <input type="password" name="password" ng-model="data.password" required="" placeholder="输入密码">
+      </label>
+      <button type="submit" class="button button-full icon-right ion-chevron-right button-calm">立即登录</button>
+    </ion-list>
+  </form>
+  <button class="button button-clear button-assertive button-small" ng-click="clearUrl()">清除URL设置</button>
+</ion-view>

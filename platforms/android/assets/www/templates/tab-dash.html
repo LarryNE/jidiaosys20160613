@@ -1,0 +1,19 @@
+<ion-view view-title="主管待办" ng-controller="DashCtrl">
+  <ion-content>
+    <ion-refresher
+            pulling-text="下拉刷新..."
+            on-refresh="doRefresh()">
+    </ion-refresher>
+    <ion-list ng-repeat="item in items">
+      <ion-item class="item item-divider item-icon-right" style="font-size:12px;">
+        {{item.Name}}
+        <span class="badge badge-assertive">{{item.UnfinishCount}}</span>
+      </ion-item>
+
+      <a class="item item-icon-right" href="javascript:;"  style="font-size:12px;" ng-click="goplan('{{citem.ChildTaskName}}', '{{citem.UnfinishCount}}')" ng-repeat="citem in item.Items">
+        {{citem.ChildTaskName}}
+        <span class="badge badge-energized">{{citem.UnfinishCount}}</span>
+      </a>
+    </ion-list>
+  </ion-content>
+</ion-view>
